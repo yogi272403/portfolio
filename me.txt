@@ -1,0 +1,7 @@
+Yogi Patel is a passionate researcher and developer specializing in Machine Learning and AI, with a
+            strong focus on AI-driven security and intelligent systems. His research has been recognized at
+            top-tier conferences, including IEEE Globecom and IEEE ICC, and published in the prestigious
+            Security and Privacy journal. Set to join the Applied Machine Learning program at the University of
+            Maryland, College Park, he combines academic excellence with hands-on industry experience in backend
+            development and AI-driven solutions. Driven by innovation, Yogi is dedicated to pushing the
+            boundaries of AI to solve real-world challenges.

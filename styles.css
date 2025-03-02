@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2{
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Header Styling */
+header {
+    padding: 40px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 43px;
+    font-weight: 550;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+header h2 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #555555;
+    margin-bottom: 40px;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* About Section (No Scrolling) */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: calc(100vh - 300px); 
+    overflow: hidden;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    max-width: 70%;
+    margin: auto;
+    width: 90%;
+}
+
+.profile-image {
+    width: 350px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 1000px;
+}
+
+.about-text h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.about-text h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Contact Links */
+a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    body {
+        overflow-y: auto; /* Enable scrolling for smaller screens */
+    }
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .profile-image {
+        width: 250px;
+    }
+
+    .about-text {
+        max-width: 90%;
+    }
+}
+
+/* Skills Section */
+.skills-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: left;
+    margin-top: -50px;
+}
+
+.skills-container h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Skill Categories */
+.skills-category {
+    margin-bottom: 30px;
+}
+
+.skills-category h3 {
+    font-size: 22px;
+    background: linear-gradient(to right, #5c67f2, #2c3e50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+
+.skills-category h3 i {
+    color: #555;
+    font-size: 22px;
+}
+
+/* Skills List */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.skills-list li:hover {
+    background: #e2e6ea;
+}
+
+.skills-list i {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Proficiency Levels */
+.proficiency {
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .skills-category h3 {
+        font-size: 20px;
+    }
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 50px auto;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+/* Contact Info Section */
+.contact-info {
+    width: 40%;
+    padding-right: 40px;
+}
+.contact-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.contact-info p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.social-links {
+    margin-top: 15px;
+}
+.social-links a {
+    font-size: 24px;
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Contact Form Section */
+.contact-form {
+    width: 50%;
+}
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.contact-form label {
+    display: block;
+    font-size: 14px;
+    margin: 10px 0 5px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.contact-form button:hover {
+    background-color: #333;
+}
