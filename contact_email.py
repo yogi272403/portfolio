@@ -18,9 +18,9 @@ def send_email(sender_email, sender_name, message_body):
     subject = f"New Contact Form Submission from {sender_name}"
 
     msg = MIMEMultipart()
-    msg["From"] = SMTP_USERNAME  # Use your own email as the sender
+    msg["From"] = receiver_email  # Use your own email as the sender
     msg["To"] = receiver_email
-    msg["Reply-To"] = sender_email  # Helps when replying
+    msg["Reply-To"] = receiver_email  # Helps when replying
     msg["Subject"] = subject
 
     body = f"Name: {sender_name}\nEmail: {sender_email}\n\nMessage:\n{message_body}"
