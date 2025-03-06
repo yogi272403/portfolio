@@ -76,7 +76,6 @@ nav ul li a:hover {
     justify-content: center;
     flex-wrap: wrap;
     height: calc(100vh - 300px); 
-    overflow: hidden;
 }
 
 .about-container {
@@ -87,6 +86,7 @@ nav ul li a:hover {
     max-width: 70%;
     margin: auto;
     width: 90%;
+    text-align: justify;
 }
 
 .profile-image {
@@ -101,7 +101,7 @@ nav ul li a:hover {
 .about-text h1 {
     font-size: 32px;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-top: -30px;
 }
 
 .about-text h2 {
@@ -112,6 +112,7 @@ nav ul li a:hover {
 }
 
 .about-text p {
+    margin-top: -20px;
     font-size: 16px;
     line-height: 1.5;
 }
@@ -202,8 +203,10 @@ a:hover {
     gap: 10px;
     font-size: 16px;
     padding: 8px 12px;
-    background: #f8f9fa;
+    background: #ffffff;
     border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease-in-out;
 }
 
@@ -243,13 +246,19 @@ a:hover {
 .contact-container {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     width: 70%;
     margin: 50px auto;
-    background: white;
+    background: #ffffff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding: 40px;
-    margin-top: -10px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    margin-top: 25px;
+    border: 1px solid #ddd;
+    overflow-y: auto;
 }
 
 /* Contact Info Section */
@@ -344,12 +353,16 @@ a:hover {
 }
 
 .timeline-item {
-    position: relative;
-    background: #fff;
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 15px; 
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    min-height: 120px;
 }
 
 /* Date */
@@ -382,7 +395,7 @@ a:hover {
     background-color: #000000;
     margin: 40px 0;
     opacity: 0.8;
-}
+} 
 
 
 /* Experience List */
@@ -394,6 +407,106 @@ a:hover {
 .timeline-item ul li {
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
+    color: #000000;
     margin-bottom: 8px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+/* Main Container */
+.publications-container {
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    margin-top: -40px;
+}
+
+/* Heading */
+.publications-container h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Individual Publication */
+.publication-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.publication-details {
+    width: 60%;
+}
+
+.publication-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.publication-meta {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.publication-authors {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.publication-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.publication-link:hover {
+    color: #005bb5;
+}
+
+/* Image Styling */
+.publication-image {
+    width: 400px;
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .publication-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .publication-details {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .publication-image {
+        width: 100%;
+        max-width: 100%;
+    }
 }

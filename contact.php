@@ -1,49 +1,29 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST["name"]);
+    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+    $message = htmlspecialchars($_POST["message"]);
 
-// require 'vendor/autoload.php'; // If using Composer
-require 'PHPMailer/PHPMailer.php'; // Uncomment if manually added
-require 'PHPMailer/SMTP.php';
-require 'PHPMailer/Exception.php';
+    // Your email address
+    $to = "yogipatel2724@gmail.com";
+    $subject = "New Contact Form Submission from $name";
+    
+    // Email Headers
+    $headers = "From: $email" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "Content-Type: text/plain; charset=UTF-8";
 
-$mail = new PHPMailer(true);
+    // Email Body
+    $body = "You have received a new message from your contact form.\n\n" .
+            "Name: $name\n" .
+            "Email: $email\n\n" .
+            "Message:\n$message\n";
 
-try {
-    // Enable verbose debug output (for debugging)
-    $mail->SMTPDebug = 2;  // Change to 0 when done debugging
-    $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';  // SMTP server
-    $mail->SMTPAuth = true;
-    $mail->Username = 'your-email@gmail.com'; // Your Gmail
-    $mail->Password = 'your-app-password';   // Use an App Password (DO NOT USE YOUR ACTUAL PASSWORD)
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = 587;
-
-    // Get user inputs
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
-
-    // Recipients
-    $mail->setFrom($email, $name);
-    $mail->addAddress('yogi.d360.2025@gmail.com'); // Your email
-
-    // Email content
-    $mail->isHTML(true);
-    $mail->Subject = "New Contact Form Submission from $name";
-    $mail->Body    = "<strong>Name:</strong> $name <br>
-                      <strong>Email:</strong> $email <br><br>
-                      <strong>Message:</strong> <br> $message";
-
-    // Send email
-    if ($mail->send()) {
-        echo "Message sent successfully!";
+    // Send Email
+    if (mail($to, $subject, $body, $headers)) {
+        echo "success";
     } else {
-        echo "Mailer Error: " . $mail->ErrorInfo;
+        echo "error";
     }
-
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 ?>
