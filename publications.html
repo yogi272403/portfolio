@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 </head>
 <body>
 
@@ -12,13 +13,14 @@
     <header>
         <h1>Yogi N. Patel</h1>
         <h2>Machine Intelligence Innovator</h2>
-        <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">About</a></li> 
-                <li><a href="background.html">Background</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
                 <li><a href="publications.html">Research</a></li>
                 <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -122,9 +124,28 @@
             </div>
             <img src="research images/rhtym tele - PM.jpg" alt="Model for Paper 2" class="publication-image" style="border: 1px solid;">
         </div>
-        <!-- Add more publications in the same format -->
-
+        
     </main>
 
+    <footer>
+        <p style="font-size: 20px;"><strong>Contact Info</strong></p>
+        <p><strong>Phone:</strong> +91 70417 99000</p>
+        <p><strong>Email:</strong> yogi2724@umd.edu</p>
+        <p><strong>Location:</strong> Surat, Gujarat - 394130</p>
+        <p><strong>Resume:</strong> <a href="https://drive.google.com/file/d/1DsYdwaOSGtzq70chW_o9Z3E6xxYfp9nd/view?usp=sharing">View Resume</a></p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/yogi.n.patel/" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/yogipatel2814" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/YOUR_TWITTER" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/yogi272403" class="social-icon"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("nav-menu");
+            nav.classList.toggle("show");
+        }
+    </script>  
 </body>
 </html>
