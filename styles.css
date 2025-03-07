@@ -101,7 +101,7 @@ nav ul li a:hover {
 .about-text h1 {
     font-size: 32px;
     font-weight: 700;
-    margin-top: -30px;
+    margin-top: 0px;
 }
 
 .about-text h2 {
@@ -112,7 +112,7 @@ nav ul li a:hover {
 }
 
 .about-text p {
-    margin-top: -20px;
+    margin-top: 0px;
     font-size: 16px;
     line-height: 1.5;
 }
@@ -125,6 +125,17 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
 }
 
 /* Responsive Design */
@@ -152,6 +163,51 @@ a:hover {
 
     .about-text {
         max-width: 90%;
+        text-align: justify;
+    }
+
+    .menu-toggle {
+        display: block; /* Show the menu button */
+        z-index: 1001;
+        position: absolute;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        width: 200px;
+        z-index: 1000;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: left;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        display: block;
+        font-size: 18px;
+    }
+
+    nav.show {
+        display: block;
     }
 }
 
@@ -241,6 +297,23 @@ a:hover {
     .skills-category h3 {
         font-size: 20px;
     }
+
+    /* Responsive Navigation */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        display: block;
+        padding: 10px;
+    }
 }
 
 .contact-container {
@@ -328,6 +401,7 @@ a:hover {
     padding: 50px 0;
     background: #ffffff;
     margin-top: -70px;
+    margin-bottom: -100px;
 }
 
 /* Timeline Container */
@@ -430,6 +504,7 @@ a:hover {
     background: white;
     border-radius: 10px;
     margin-top: -40px;
+    margin-bottom: -20px;
 }
 
 /* Heading */
@@ -509,4 +584,39 @@ a:hover {
         width: 100%;
         max-width: 100%;
     }
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #d6d8da;
+    color: #000000;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 80px;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links .social-icon {
+    margin: 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.social-links .social-icon:hover {
+    color: #007bff;
 }
